@@ -1,6 +1,6 @@
 Time Series Forcasting of Energy Consumption Data
 
-A time series takes historic data and uses machine learning models to predict the consumption in the future
+A time series takes historic data and uses machine learning models to predict the consumption in the future. Energy consumption tends to be considered a seasonal pattern.
 
 Here the XGBoost machine learning model is used known to be a great out of the box model for tabular and timeseries data
 
