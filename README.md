@@ -12,3 +12,9 @@ PJM Interconnection LLC (PJM) is a regional transmission organization (RTO) in t
 The hourly power consumption data comes from PJM's website and are in megawatts (MW).
 
 The regions have changed over the years so data may only appear for certain dates per region.
+
+1998-2002 : LOAD Region (includes all regions no separations)
+2002-2018 : PJME and PJMW (region is split between west and east- see map)
+2004-2018 : Company State specific regions develop (AEP,COMED,DAYTON,DEOK,DOM,DUQ,EKPC - see map 2)
+
+**This analysis and predictions with focus on PJME and PJMW as they are the most comprehensive data set, although the general regions are larger thus the results will be more generalized**
