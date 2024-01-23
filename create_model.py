@@ -1,5 +1,4 @@
 import pandas as pd
-from sklearn.metrics import mean_squared_error, accuracy_score
 from sklearn.model_selection import TimeSeriesSplit
 import xgboost as xgb
 
