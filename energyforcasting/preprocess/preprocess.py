@@ -1,5 +1,6 @@
 import pandas as pd
 from pandas.api.types import CategoricalDtype
+
 def create_timeseries_features(df, label=None):
     cat_type = CategoricalDtype(categories=['Monday', 'Tuesday',
                                             'Wednesday',
@@ -32,3 +33,6 @@ def create_timeseries_features(df, label=None):
         y = df[label]
         return X, y
     return X
+
+def denoiser(df):
+    pass
