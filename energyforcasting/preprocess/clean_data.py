@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 from scipy.stats import iqr
+
 def mean_absolute_percentage_error(y_true, y_pred):
     '''
     Mean Absolute Percentage Error (MAPE) Function
@@ -47,3 +48,13 @@ def iqr_outlier_threshold(df, column):
       f'IQR: {iqr_value}', f'Lower threshold:{lower_threshold}', f'Upper threshold: {upper_threshold}')
     
     return upper_threshold, lower_threshold
+
+def mean_std_outliers(df, column):
+    mean = df[column].mean()
+    std = df[column].std()
+    cut_off = std*3
+    lower, upper = mean - cut_off, mean + cut_off
+    print('Outlier threshold calculations:',
+           f'Lower threshold:{lower}', f'Upper threshold: {upper}')
+    
+    return upper, lower
