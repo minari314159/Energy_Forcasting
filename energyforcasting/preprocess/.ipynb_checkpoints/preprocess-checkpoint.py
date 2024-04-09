@@ -15,8 +15,8 @@ def create_timeseries_features(df, label=None):
     df['date'] = df.index
     df['hour'] = df['date'].dt.hour
     df['dayofweek'] = df['date'].dt.dayofweek
-    df['weekday'] = df['date'].dt.day_name()
-    df['weekday'] = df['weekday'].astype(cat_type)
+    # df['weekday'] = df['date'].dt.day_name()
+    # df['weekday'] = df['weekday'].astype(cat_type)
     df['quarter'] = df['date'].dt.quarter
     df['month'] = df['date'].dt.month
     df['year'] = df['date'].dt.year
@@ -24,9 +24,9 @@ def create_timeseries_features(df, label=None):
     df['dayofmonth'] = df['date'].dt.day
     df['date_offset'] = (df.date.dt.month*100 + df.date.dt.day - 320) % 1300
 
-    df['season'] = pd.cut(df['date_offset'], [0, 300, 602, 900, 1300],
-                          labels=['Spring', 'Summer', 'Autumn', 'Winter']
-                          )
+    #df['season'] = pd.cut(df['date_offset'], [0, 300, 602, 900, 1300],
+                          #labels=['Spring', 'Summer', 'Autumn', 'Winter']
+                          #)
     X = df[['hour', 'dayofweek', 'quarter', 'month', 'year',
            'dayofyear', 'dayofmonth', 'weekday',
             'season']]
@@ -36,3 +36,5 @@ def create_timeseries_features(df, label=None):
     return X
 
 
+def denoiser(df):
+    pass
